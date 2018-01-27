@@ -2,6 +2,7 @@
   "name": "hapi-starter",
   "version": "1.0.0",
   "description": "hapi js starter",
+  "author": "Yansen",
   "main": "index.js",
   "scripts": {
     "start": "node .",
