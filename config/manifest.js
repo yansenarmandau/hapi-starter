@@ -3,6 +3,7 @@ const ConfigServer = require('./server')
 const routes = require('./../routes')
 
 const Environment = ConfigServer['env']
+const AppVersion = ConfigServer['version']
 
 const goodOptions = {
   includes: {
@@ -42,7 +43,25 @@ let plugins = {
 }
 
 if (Environment.toLowerCase() === 'development') {
-  plugins['register']['plugins'].push({ plugin: require('blipp') })
+  plugins['register']['plugins'].push({
+    plugin: require('blipp')
+  }, {
+    plugin: require('hapi-swagger'),
+    options: {
+      info: {
+        title: 'API Documentation',
+        version: AppVersion,
+        contact: {
+          name: 'Your Email',
+          email: 'email@example.com'
+        }
+      }
+    }
+  }, {
+    plugin: require('inert')
+  }, {
+    plugin: require('vision')
+  })
 }
 
 module.exports = plugins
