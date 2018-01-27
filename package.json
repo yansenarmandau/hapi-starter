@@ -7,7 +7,7 @@
     "start": "node .",
     "dev": "nodemon ./index.js",
     "lint": "./node_modules/.bin/eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && jest"
   },
   "author": "Yansen",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.1.4",
     "nodemon": "^1.14.11"
   }
 }
