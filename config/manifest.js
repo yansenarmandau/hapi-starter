@@ -1,4 +1,5 @@
 const ConfigServer = require('./server')
+const routes = require('./../routes')
 
 module.exports = {
   server: {
@@ -7,5 +8,10 @@ module.exports = {
     routes: {
       cors: true
     }
+  },
+  register: {
+    plugins: [
+      { plugin: routes }
+    ]
   }
 }
