@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon ./index.js",
+    "lint": "./node_modules/.bin/eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yansen",
@@ -16,6 +17,12 @@
     "hapi": "^17.2.0"
   },
   "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "nodemon": "^1.14.11"
   }
 }
