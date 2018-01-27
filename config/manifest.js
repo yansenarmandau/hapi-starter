@@ -2,7 +2,7 @@ const Good = require('good')
 const ConfigServer = require('./server')
 const routes = require('./../routes')
 
-const ENV = ConfigServer['env']
+const Environment = ConfigServer['env']
 
 const goodOptions = {
   includes: {
@@ -41,7 +41,7 @@ let plugins = {
   }
 }
 
-if (ENV.toLowerCase() === 'development') {
+if (Environment.toLowerCase() === 'development') {
   plugins['register']['plugins'].push({ plugin: require('blipp') })
 }
 
