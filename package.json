@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon ./index.js",
+    "dev": "NODE_ENV=development nodemon ./index.js",
     "lint": "./node_modules/.bin/eslint .",
-    "test": "npm run lint && jest"
+    "test": "NODE_ENV=test npm run lint && jest"
   },
   "author": "Yansen",
   "license": "ISC",
