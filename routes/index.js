@@ -4,7 +4,12 @@ const routes = {
       {
         method: 'GET',
         path: '/',
-        handler: (request, h) => `i'm Hapi`
+        config: {
+          handler: (request, h) => `i'm Hapi`,
+          description: 'Root API',
+          notes: 'Return API status',
+          tags: ['api']
+        }
       }
     ])
   },
