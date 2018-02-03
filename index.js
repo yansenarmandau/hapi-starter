@@ -9,10 +9,6 @@ const startServer = async () => {
     const server = await Glue.compose(manifest, { relativeTo: __dirname })
 
     await server.start()
-
-    server.events.on('response', (request) => {
-      console.log(`Request Payload: `, request.payload)
-    })
     console.log(`Server running at: ${server.info.uri}`)
   } catch (err) {
     console.log(err)
