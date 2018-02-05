@@ -1,6 +1,9 @@
 const Good = require('good')
+const HapiNowAuth = require('@now-ims/hapi-now-auth')
+
 const ConfigServer = require('./server')
 const routes = require('./../routes')
+const authPlugin = require('./../plugins/auth')
 
 const Environment = ConfigServer['env']
 const AppVersion = ConfigServer['version']
@@ -36,6 +39,8 @@ let plugins = {
   },
   register: {
     plugins: [
+      { plugin: HapiNowAuth },
+      { plugin: authPlugin },
       { plugin: routes },
       { plugin: Good, options: goodOptions }
     ]
