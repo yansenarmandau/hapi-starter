@@ -12,6 +12,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@now-ims/hapi-now-auth": "^1.0.1",
     "dotenv": "^4.0.0",
     "glue": "^5.0.0",
     "good": "^8.0.0",
