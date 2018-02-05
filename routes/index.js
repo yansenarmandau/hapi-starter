@@ -8,7 +8,8 @@ const routes = {
           handler: (request, h) => `i'm Hapi`,
           description: 'Root API',
           notes: 'Return API status',
-          tags: ['api']
+          tags: ['api'],
+          auth: false
         }
       }
     ])
