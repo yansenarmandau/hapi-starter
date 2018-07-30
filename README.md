@@ -2,6 +2,15 @@
 
 simple boilerplate for building REST API using Hapi
 
+## Setup
+```sh
+# Copy env
+cp .env.example .env
+
+# Install dependencies
+npm install
+```
+
 ## Commands
 ```sh
 # Development mod
