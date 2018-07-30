@@ -3,6 +3,9 @@
 simple boilerplate for building REST API using Hapi
 
 ## Commands
+```cp .env.example .env```
+
+## Commands
 ```sh
 # Development mod
 npm run dev
